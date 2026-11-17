@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Combining machine learning and optimization to plan power system capacity under uncertainty and to operate batteries and microgrids at practical scale.">
+    <meta name="description" content="Research areas of Taehyeon Kwon: scalable algorithms that combine mathematical optimization and machine learning for power system planning and operation under uncertainty.">
     <meta name="theme-color" content="#ffffff">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Research | Taehyeon Kwon">
-    <meta property="og:description" content="Combining machine learning and optimization to plan power system capacity under uncertainty and to operate batteries and microgrids at practical scale.">
+    <meta property="og:description" content="Research areas of Taehyeon Kwon: scalable algorithms that combine mathematical optimization and machine learning for power system planning and operation under uncertainty.">
     <title>Research | Taehyeon Kwon</title>
     <link rel="preload" href="assets/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
@@ -34,98 +34,155 @@
     <main id="main-content" class="main-content" tabindex="-1">
       <div class="page-heading">
         <h1>Research</h1>
-        <p class="research-lead">I combine machine learning with mathematical optimization so that large power system problems, deciding what to build and how to operate it, can be solved at realistic scale.</p>
+        <p class="research-lead">I develop scalable algorithms that combine <strong>mathematical optimization</strong> and <strong>machine learning</strong> for large decision problems under uncertainty, with a focus on power systems.</p>
       </div>
 
-      <nav class="research-toc" aria-label="Research topics">
-        <a href="#planning"><span>01</span>Capacity expansion planning</a>
-        <a href="#operation"><span>02</span>Storage &amp; microgrid operation</a>
-      </nav>
+      <!-- Research areas -->
+      <section class="research-block" aria-labelledby="areas-heading">
+        <h2 id="areas-heading" class="block-heading">Research areas</h2>
+        <div class="area-grid">
+          <article id="operation" class="area-card">
+            <svg class="area-art" viewBox="0 0 360 200" role="img" aria-label="Solar panel, power grid, and a house connected to a battery whose charging is set by a learned controller.">
+              <defs>
+                <marker id="op-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#5b4bd7"/></marker>
+              </defs>
+              <!-- sun + PV -->
+              <g stroke="#b58a3c" stroke-width="2" stroke-linecap="round"><circle cx="60" cy="42" r="12" fill="#fcf7ed"/><path d="M60 22v4M60 58v4M40 42h4M76 42h4M46 28l3 3M71 53l3 3M46 56l3-3M71 31l3-3"/></g>
+              <path d="M38 118 54 88h50l-16 30Z" fill="#f4f2ff" stroke="#5b4bd7" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M46 103h50M71 88l-8 30M87 88l-8 30" stroke="#9284de" stroke-width="1.4"/>
+              <path d="M68 118v16M58 134h20" stroke="#484852" stroke-width="2" stroke-linecap="round"/>
+              <!-- grid tower -->
+              <g fill="none" stroke="#484852" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M290 78 302 22l12 56M294 60h16M297 44h10M284 34h36M299 22v-6"/></g>
+              <!-- house -->
+              <g fill="#fff" stroke="#484852" stroke-width="2" stroke-linejoin="round"><path d="M266 140 296 114l30 26"/><rect x="274" y="138" width="44" height="40" rx="3"/></g>
+              <rect x="290" y="156" width="12" height="22" rx="2" fill="#f4f2ff" stroke="#5b4bd7" stroke-width="1.6"/>
+              <!-- battery -->
+              <rect x="168" y="70" width="24" height="9" rx="3" fill="#5b4bd7"/>
+              <rect x="150" y="79" width="60" height="98" rx="11" fill="#f4f2ff" stroke="#5b4bd7" stroke-width="2.2"/>
+              <g fill="#9284de"><rect x="159" y="152" width="42" height="16" rx="3"/><rect x="159" y="132" width="42" height="16" rx="3"/></g>
+              <rect x="159" y="112" width="42" height="16" rx="3" fill="#c4bbea"/>
+              <rect x="159" y="92" width="42" height="16" rx="3" fill="none" stroke="#c4bbea" stroke-dasharray="3 3"/>
+              <!-- wear -->
+              <circle cx="214" cy="170" r="10" fill="#fcf7ed" stroke="#b58a3c" stroke-width="1.6"/>
+              <path d="M207 170h3l2-4 3 8 2-4h3" fill="none" stroke="#b58a3c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- controller -->
+              <g stroke="#c4bbea" stroke-width="1.2"><path d="M164 22 180 32M164 42 180 32M180 32 196 22M180 32 196 42"/></g>
+              <g fill="#fff" stroke="#5b4bd7" stroke-width="1.8"><circle cx="164" cy="22" r="4.5"/><circle cx="164" cy="42" r="4.5"/><circle cx="196" cy="22" r="4.5"/><circle cx="196" cy="42" r="4.5"/></g>
+              <circle cx="180" cy="32" r="5.5" fill="#5b4bd7"/>
+              <path d="M180 46v18" stroke="#5b4bd7" stroke-width="1.8" stroke-dasharray="3 3"/>
+              <!-- flows -->
+              <g fill="none" stroke="#5b4bd7" stroke-width="2">
+                <path d="M100 112 C120 112 126 124 142 124" marker-end="url(#op-arrow)"/>
+                <path d="M218 150 C236 150 246 156 262 158" marker-end="url(#op-arrow)"/>
+                <path d="M286 82 C262 98 236 100 218 108" marker-start="url(#op-arrow)" marker-end="url(#op-arrow)"/>
+              </g>
+            </svg>
+            <p class="area-scale">Operation · minutes to hours</p>
+            <h3>Energy storage &amp; microgrid operation</h3>
+            <p class="area-question">When should a battery charge or discharge?</p>
+            <p class="area-text">Real-time control of batteries and PV–storage microgrids that weighs electricity prices, uncertainty, and battery degradation.</p>
+            <ul class="method-tags" aria-label="Main methods">
+              <li>Reinforcement learning</li>
+              <li>Degradation modeling</li>
+            </ul>
+          </article>
 
-      <article id="planning" class="research-project" aria-labelledby="planning-heading">
-        <p class="project-kicker">01 · Planning · Ph.D. research with Dr. Anirudh Subramanyam</p>
-        <h2 id="planning-heading">Capacity expansion planning under uncertainty</h2>
-        <p class="project-summary">Grid planners decide which generators, transmission lines, and storage to build over decades, before future demand and renewable output are known. Judging a single candidate plan means simulating grid operation over many scenarios and hours, so the full planning problem quickly becomes too large to solve.</p>
-
-        <figure class="method-figure">
-          <figcaption>Where the computation goes, and what my method replaces</figcaption>
-          <div class="obj-row" aria-label="Planning objective: minimize investment cost plus expected operating cost">
-            <span class="obj-word">minimize</span>
-            <span class="obj-term">Investment cost</span>
-            <span class="obj-op" aria-hidden="true">+</span>
-            <span class="obj-term obj-term-hard">Expected operating cost</span>
-          </div>
-          <div class="compare">
-            <div class="compare-col">
-              <p class="compare-label">Standard: compute it exactly</p>
-              <p>Average the cost of operating the grid over <strong>S scenarios × H hours</strong> inside the optimization. S and H are fixed in advance: too small is inaccurate, too large is intractable.</p>
-            </div>
-            <div class="compare-col compare-after">
-              <p class="compare-label">AutoSCEP: learn it</p>
-              <p>Train a <strong>neural network</strong> to predict this cost from the plan, then embed it in the planning model as mixed-integer linear constraints. S and H are chosen automatically.</p>
-            </div>
-          </div>
-          <p class="pipeline-label">AutoSCEP in four steps</p>
-          <ol class="pipeline">
-            <li><span class="pipeline-step" aria-hidden="true">1</span><strong>Sample plans</strong><span>Draw feasible investment plans using constraint propagation.</span></li>
-            <li><span class="pipeline-step" aria-hidden="true">2</span><strong>Label costs</strong><span>Lengthen the horizon, then add scenarios, until each cost estimate is precise enough.</span></li>
-            <li><span class="pipeline-step" aria-hidden="true">3</span><strong>Train</strong><span>Fit a ReLU neural network or a linear model to the labels.</span></li>
-            <li><span class="pipeline-step" aria-hidden="true">4</span><strong>Optimize</strong><span>Solve the planning model with the trained model embedded.</span></li>
-          </ol>
-        </figure>
-
-        <div class="result-block">
-          <p class="result-heading">Results on the European EMPIRE model</p>
-          <dl class="result-stats">
-            <div><dt>1.6%</dt><dd>optimality gap on the reduced model, solved in under 2 seconds once trained</dd></div>
-            <div><dt>8% <span>vs</span> 11%</dt><dd>gap on the larger model, versus progressive hedging after 6 hours</dd></div>
-            <div><dt>~77%</dt><dd>less time to generate training data than with fixed scenario and hour settings</dd></div>
-          </dl>
-          <p class="result-source">From the arXiv version of the paper (Tables 2–3).</p>
+          <article id="planning" class="area-card">
+            <svg class="area-art" viewBox="0 0 360 200" role="img" aria-label="Generation, transmission, and storage capacity growing over decades beneath a fan of uncertain future demand scenarios.">
+              <!-- uncertainty fan -->
+              <g fill="none" stroke="#b58a3c" stroke-width="1.6" stroke-dasharray="4 5" stroke-linecap="round" opacity="0.75">
+                <path d="M40 132 C140 112 230 66 336 22"/>
+                <path d="M40 132 C150 112 240 82 336 50"/>
+                <path d="M40 132 C150 116 250 100 336 78"/>
+                <path d="M40 132 C160 122 260 116 336 104"/>
+              </g>
+              <circle cx="40" cy="132" r="4.5" fill="#b58a3c"/>
+              <!-- capacity build-out -->
+              <g>
+                <rect x="30" y="150" width="30" height="20" rx="3" fill="#5b4bd7"/><rect x="30" y="140" width="30" height="8" rx="2" fill="#9284de"/><rect x="30" y="134" width="30" height="4" rx="2" fill="#c4bbea"/>
+                <rect x="82" y="142" width="30" height="28" rx="3" fill="#5b4bd7"/><rect x="82" y="128" width="30" height="12" rx="2" fill="#9284de"/><rect x="82" y="120" width="30" height="6" rx="2" fill="#c4bbea"/>
+                <rect x="134" y="132" width="30" height="38" rx="3" fill="#5b4bd7"/><rect x="134" y="114" width="30" height="16" rx="2" fill="#9284de"/><rect x="134" y="102" width="30" height="10" rx="2" fill="#c4bbea"/>
+                <rect x="186" y="122" width="30" height="48" rx="3" fill="#5b4bd7"/><rect x="186" y="100" width="30" height="20" rx="2" fill="#9284de"/><rect x="186" y="82" width="30" height="16" rx="2" fill="#c4bbea"/>
+                <rect x="238" y="112" width="30" height="58" rx="3" fill="#5b4bd7"/><rect x="238" y="86" width="30" height="24" rx="2" fill="#9284de"/><rect x="238" y="62" width="30" height="22" rx="2" fill="#c4bbea"/>
+                <rect x="290" y="102" width="30" height="68" rx="3" fill="#5b4bd7"/><rect x="290" y="72" width="30" height="28" rx="2" fill="#9284de"/><rect x="290" y="40" width="30" height="30" rx="2" fill="#c4bbea"/>
+              </g>
+              <path d="M20 171H344" stroke="#c9c7d3" stroke-width="1.5"/>
+              <g stroke="#c9c7d3" stroke-width="1.5"><path d="M45 171v5M97 171v5M149 171v5M201 171v5M253 171v5M305 171v5"/></g>
+              <!-- legend dots -->
+              <g><rect x="22" y="186" width="10" height="10" rx="2" fill="#5b4bd7"/><rect x="104" y="186" width="10" height="10" rx="2" fill="#9284de"/><rect x="196" y="186" width="10" height="10" rx="2" fill="#c4bbea"/></g>
+              <g class="art-legend"><text x="37" y="195">generation</text><text x="119" y="195">transmission</text><text x="211" y="195">storage</text></g>
+              <g stroke="#b58a3c" stroke-width="1.6" stroke-dasharray="4 5"><path d="M276 191h18"/></g>
+              <text class="art-legend" x="299" y="195">futures</text>
+            </svg>
+            <p class="area-scale">Planning · years to decades</p>
+            <h3>Capacity expansion planning</h3>
+            <p class="area-question">What should we build for an uncertain future?</p>
+            <p class="area-text">Long-term generation, transmission, and storage investments, evaluated across many possible futures at continental scale.</p>
+            <ul class="method-tags" aria-label="Main methods">
+              <li>Stochastic programming</li>
+              <li>NN-constrained optimization</li>
+            </ul>
+          </article>
         </div>
+        <div class="timescale" aria-hidden="true"><span>minutes</span><i></i><span>decades</span></div>
+      </section>
 
-        <ul class="method-tags" aria-label="Methods">
-          <li>Two-stage stochastic programming</li>
-          <li>Neural network surrogates</li>
-          <li>Mixed-integer optimization</li>
-          <li>High-performance computing</li>
+      <!-- Methods -->
+      <section class="research-block" aria-labelledby="methods-heading">
+        <h2 id="methods-heading" class="block-heading">Methods</h2>
+        <ul class="method-grid">
+          <li class="method-card">
+            <svg class="method-art" viewBox="0 0 120 72" aria-hidden="true">
+              <g stroke="#9284de" stroke-width="1.8" fill="none"><path d="M16 36 52 20M16 36l36 16M52 20 92 10M52 20l40 18M52 52l40-14M52 52l40 12"/></g>
+              <circle cx="16" cy="36" r="6" fill="#5b4bd7"/>
+              <g fill="#f4f2ff" stroke="#5b4bd7" stroke-width="1.8"><circle cx="52" cy="20" r="5"/><circle cx="52" cy="52" r="5"/></g>
+              <g fill="#fff" stroke="#5b4bd7" stroke-width="1.8"><circle cx="92" cy="10" r="4.5"/><circle cx="92" cy="38" r="4.5"/><circle cx="92" cy="64" r="4.5"/></g>
+            </svg>
+            <h3>Stochastic programming</h3>
+            <p>Decide now, before the future is known.</p>
+          </li>
+          <li class="method-card">
+            <svg class="method-art" viewBox="0 0 120 72" aria-hidden="true">
+              <rect x="6" y="6" width="108" height="60" rx="11" fill="#f4f2ff" stroke="#c4bbea" stroke-width="1.5"/>
+              <text x="18" y="41" font-size="13" font-weight="600" fill="#4335ac" font-family="Geist Mono, ui-monospace, monospace">min</text>
+              <g stroke="#c4bbea" stroke-width="1.2"><path d="M58 22 80 29M58 22l22 21M58 36l22-7M58 36l22 7M58 50l22-21M58 50l22-7M80 29l22 7M80 43l22-7"/></g>
+              <g fill="#fff" stroke="#5b4bd7" stroke-width="1.6"><circle cx="58" cy="22" r="4"/><circle cx="58" cy="36" r="4"/><circle cx="58" cy="50" r="4"/><circle cx="80" cy="29" r="4"/><circle cx="80" cy="43" r="4"/></g>
+              <circle cx="102" cy="36" r="4.5" fill="#5b4bd7"/>
+            </svg>
+            <h3>NN-constrained optimization</h3>
+            <p>Embed learned models inside optimization models.</p>
+          </li>
+          <li class="method-card">
+            <svg class="method-art" viewBox="0 0 120 72" aria-hidden="true">
+              <defs><marker id="rl-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10z" fill="#5b4bd7"/></marker><marker id="rl-arrow-gray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10z" fill="#86819a"/></marker></defs>
+              <circle cx="28" cy="36" r="17" fill="#f4f2ff" stroke="#5b4bd7" stroke-width="1.8"/>
+              <g fill="#5b4bd7"><circle cx="22" cy="30" r="2.6"/><circle cx="22" cy="42" r="2.6"/><circle cx="35" cy="36" r="3"/></g>
+              <g stroke="#9284de" stroke-width="1.1"><path d="M22 30l13 6M22 42l13-6"/></g>
+              <rect x="80" y="18" width="32" height="36" rx="7" fill="#f7f7fb" stroke="#484852" stroke-width="1.6"/>
+              <g fill="#9284de"><rect x="87" y="38" width="18" height="9" rx="2"/></g><rect x="87" y="27" width="18" height="8" rx="2" fill="#c4bbea"/>
+              <path d="M42 22 Q60 6 76 18" fill="none" stroke="#5b4bd7" stroke-width="1.8" marker-end="url(#rl-arrow)"/>
+              <path d="M78 54 Q60 68 44 52" fill="none" stroke="#86819a" stroke-width="1.8" marker-end="url(#rl-arrow-gray)"/>
+            </svg>
+            <h3>Reinforcement learning</h3>
+            <p>Learn control policies from interaction.</p>
+          </li>
+          <li class="method-card">
+            <svg class="method-art" viewBox="0 0 120 72" aria-hidden="true">
+              <g stroke="#c4bbea" stroke-width="1.6"><path d="M60 36 26 18M60 36 26 54M60 36l34-18M60 36l34 18"/></g>
+              <g fill="#f7f7fb" stroke="#484852" stroke-width="1.6"><rect x="10" y="6" width="26" height="22" rx="5"/><rect x="10" y="44" width="26" height="22" rx="5"/><rect x="84" y="6" width="26" height="22" rx="5"/><rect x="84" y="44" width="26" height="22" rx="5"/></g>
+              <g fill="#9284de"><rect x="16" y="13" width="14" height="3" rx="1.5"/><rect x="16" y="19" width="10" height="3" rx="1.5"/><rect x="16" y="51" width="14" height="3" rx="1.5"/><rect x="16" y="57" width="10" height="3" rx="1.5"/><rect x="90" y="13" width="14" height="3" rx="1.5"/><rect x="90" y="19" width="10" height="3" rx="1.5"/><rect x="90" y="51" width="14" height="3" rx="1.5"/><rect x="90" y="57" width="10" height="3" rx="1.5"/></g>
+              <circle cx="60" cy="36" r="9" fill="#5b4bd7"/>
+            </svg>
+            <h3>Decomposition &amp; HPC</h3>
+            <p>Split very large models and solve the parts in parallel.</p>
+          </li>
         </ul>
-        <p class="project-links">
-          <a href="publications.html"><cite>Electric Power Systems Research</cite> (2027)</a>
-          <a href="https://arxiv.org/abs/2603.13508">arXiv <span aria-hidden="true">↗</span></a>
-          <a href="https://github.com/Subramanyam-Lab/AutoSCEP">Code <span aria-hidden="true">↗</span></a>
-        </p>
-      </article>
+      </section>
 
-      <article id="operation" class="research-project" aria-labelledby="operation-heading">
-        <p class="project-kicker">02 · Operation · with Dr. Min Kyu Sim’s group, Seoul National University of Science and Technology</p>
-        <h2 id="operation-heading">Energy storage and microgrid operation</h2>
-        <p class="project-summary">A battery earns money by charging when electricity is cheap and discharging when it is expensive, but every cycle also wears it down. I develop controllers that decide when to charge and discharge while counting that wear as a cost.</p>
-
-        <figure class="method-figure">
-          <figcaption>The control loop, repeated at every time step</figcaption>
-          <ol class="loop">
-            <li class="loop-node loop-observe"><strong>Observe</strong><span>Solar output, demand, electricity price, and the battery’s state of charge</span></li>
-            <li class="loop-node loop-forecast"><strong>Forecast</strong><span>A learned world model predicts upcoming solar output and demand</span></li>
-            <li class="loop-node loop-act"><strong>Act</strong><span>The reinforcement learning policy sets the charge or discharge power</span></li>
-            <li class="loop-node loop-learn"><strong>Learn</strong><span>Cost = electricity cost + degradation cost from a battery aging model</span></li>
-          </ol>
-        </figure>
-
-        <p class="result-heading">Papers in this line of work</p>
-        <ul class="contribution-list">
-          <li><p><strong>Degradation-aware reinforcement learning.</strong> Battery control learned with a Markovian model of battery degradation.</p><a href="https://www.sciencedirect.com/science/article/pii/S2352152X23013610"><cite>J. Energy Storage</cite>, 2023</a></li>
-          <li><p><strong>Multi-agent control.</strong> Multi-agent reinforcement learning for PV–storage systems in a grid.</p><a href="https://ieeexplore.ieee.org/abstract/document/10087384">IEEE GlobConHT, 2023</a></li>
-          <li><p><strong>Optimization-based scheduling.</strong> A quadratic degradation model that keeps DC microgrid scheduling a quadratic program.</p><a href="https://ieeexplore.ieee.org/abstract/document/10557583"><cite>IEEE Access</cite>, 2024</a></li>
-          <li><p><strong>World-model reinforcement learning.</strong> Forecasts of solar output and demand give the agent a view of what comes next.</p><a href="https://www.sciencedirect.com/science/article/pii/S2352152X25038642"><cite>J. Energy Storage</cite>, 2026</a></li>
-        </ul>
-
-        <ul class="method-tags" aria-label="Methods">
-          <li>Reinforcement learning</li>
-          <li>Battery degradation modeling</li>
-          <li>Quadratic programming</li>
-        </ul>
-      </article>
+      <div class="research-footer">
+        <a class="button" href="publications.html">See publications <span aria-hidden="true">→</span></a>
+        <p class="research-funding">Supported by the U.S. Department of Energy and the National Research Foundation of Korea.</p>
+      </div>
     </main>
     </div>
 
