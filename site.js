@@ -1,5 +1,6 @@
 // Preserve links to sections of the former single-page homepage.
 const formerSections = {
+  news: 'news.html',
   research: 'research.html',
   publications: 'publications.html',
   conferences: 'experience.html',

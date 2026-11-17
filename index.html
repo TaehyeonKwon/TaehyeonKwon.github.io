@@ -21,7 +21,7 @@
         <a class="site-name" href="index.html">Taehyeon Kwon</a>
         <nav aria-label="Main navigation">
           <a href="index.html" aria-current="page">About</a>
-          <a href="index.html#news">News</a>
+          <a href="news.html">News</a>
           <a href="research.html">Research</a>
           <a href="publications.html">Publications</a>
           <a href="experience.html">Experience</a>
@@ -66,35 +66,24 @@
         </div>
       </section>
 
-      <section id="news" class="news section" aria-labelledby="news-heading">
+      <section id="recent-news" class="news-preview" aria-labelledby="recent-news-heading">
         <div class="section-heading">
-          <h2 id="news-heading">News</h2>
+          <h2 id="recent-news-heading">Recent news</h2>
+          <a class="section-link" href="news.html">All news <span aria-hidden="true">→</span></a>
         </div>
-        <!-- Add new items at the top. Use only the date precision known for each update. -->
-        <ol class="news-list" aria-label="Selected news, newest first">
-          <li class="news-item">
-            <time datetime="2026-11-10">Nov 10, 2026</time>
-            <p>I passed my comprehensive exam and became a <strong>Ph.D. candidate (ABD)</strong> in Industrial Engineering at Penn State!</p>
+        <!-- Keep the three newest items from news.html here. -->
+        <ol class="news-timeline" aria-label="Three most recent news items">
+          <li class="news-entry" data-kind="milestone">
+            <div class="news-meta"><time class="news-date" datetime="2026-11-10">Nov 10, 2026</time><span class="news-tag news-tag-milestone">Milestone</span></div>
+            <p class="news-text">Passed my comprehensive exam and advanced to <strong>Ph.D. candidacy</strong> in Industrial Engineering at Penn State.</p>
           </li>
-          <li class="news-item">
-            <time datetime="2026-11-01">Nov 2026</time>
-            <p>I presented my research and chaired a session at the <a href="experience.html#informs-2026">INFORMS Annual Meeting 2026</a> in San Francisco.</p>
+          <li class="news-entry">
+            <div class="news-meta"><time class="news-date" datetime="2026-11-01">Nov 1–4, 2026</time><span class="news-tag news-tag-talk">Talk</span></div>
+            <p class="news-text">Presented my research and chaired a session at the <a href="experience.html#informs-2026">INFORMS Annual Meeting 2026</a> in San Francisco.</p>
           </li>
-          <li class="news-item">
-            <time datetime="2026-10-26">Oct 2026</time>
-            <p>I attended the National Academies workshop on <a href="experience.html#nas-ai-2026">Integration of Artificial Intelligence in the Electricity System</a>.</p>
-          </li>
-          <li class="news-item">
-            <time datetime="2026-08-18">Aug 2026</time>
-            <p>I presented “Machine Learning-Enabled Large-Scale Capacity Expansion Planning under Uncertainty” at <a href="experience.html#mopta-2026">MOPTA 2026</a> at Lehigh University.</p>
-          </li>
-          <li class="news-item">
-            <time datetime="2026-01">Jan 2026</time>
-            <p>Our paper, “Optimal Microgrid Operation Considering Accurate Battery Degradation – World Model-based Reinforcement Learning Approach,” was published in <a href="https://www.sciencedirect.com/science/article/pii/S2352152X25038642"><cite>Journal of Energy Storage</cite></a>.</p>
-          </li>
-          <li class="news-item">
-            <time datetime="2024-09-04">Sep 4, 2024</time>
-            <p>I passed my Ph.D. qualifying exam in Industrial Engineering at Penn State.</p>
+          <li class="news-entry">
+            <div class="news-meta"><time class="news-date" datetime="2026-10-26">Oct 26–27, 2026</time><span class="news-tag news-tag-event">Workshop</span></div>
+            <p class="news-text">Attended the National Academies workshop <a href="experience.html#nas-ai-2026">“Integration of Artificial Intelligence in the Electricity System.”</a></p>
           </li>
         </ol>
       </section>
